@@ -1,2 +1,7 @@
-<!--index.wxml-->
-
+<!--新闻分类-->
+<view class="category-wrapper">
+  <view class="category-tab" bindtap="onTapCategory" data-category-code="{{item.code}}" wx:for="{{categories}}" wx:key="code">
+    <view class="category-text {{selectedCategoryCode === item.code ? 'active' : ''}}">{{item.name}}</view>
+    <view class="category-indicator {{selectedCategoryCode === item.code ? 'active' : ''}}"></view>
+  </view>
+</view>

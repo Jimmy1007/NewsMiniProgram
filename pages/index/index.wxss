@@ -1,1 +1,38 @@
 /**index.wxss**/
+.category-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #38c7eb;
+  color: white;
+  font-size:32rpx;
+  line-height: 45rpx;
+  padding: 30rpx 0;
+  z-index: 100;
+}
+
+.category-indicator {
+  border-radius: 3rpx; 
+  border:3rpx solid #2e83f1;
+  margin: 10rpx auto 0;
+  width: 32rpx;
+  opacity: 0;
+}
+
+.category-indicator.active {
+  opacity: 1;
+}
+
+.category-text {
+  opacity: 0.6;
+}
+
+.category-text.active {
+  opacity: 1;
+}
+
+
