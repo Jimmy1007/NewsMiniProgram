@@ -10,6 +10,18 @@ const categories = [
 
 
 Page({
+  data: {
+    categories: categories,
+    selectedCategoryCode: categories[0].code, //当前选中的新闻类别，默认选中第一个
+    newsListMap: {},
+    hotNews: {
+      title: '加载中...',
+      source: '',
+      date: '',
+      firstImage: '/images/cloudy-bg.png'
+    },
+    swiperHeight: 0
+  },
 
   
 })
