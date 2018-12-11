@@ -14,10 +14,10 @@ Page({
     selectedCategoryCode: categories[0].code, //当前选中的新闻类别，默认选中第一个
     newsListMap: {},
     hotNews: {
-      title: '加载中...',
+      title: '...',
       source: '',
       date: '',
-      firstImage: '/images/cloudy-bg.png'
+      firstImage: ''
     },
     swiperHeight: 0
   },
@@ -27,8 +27,8 @@ Page({
    */
   onLoad() {
     this.setSwiperHeight();
-    //this.initNewsListMap();
-    //this.getNewsList();
+    this.initNewsListMap();
+    this.getNewsList();
   },
 
   /**
@@ -57,10 +57,10 @@ Page({
       newsListMap[category.code] = {
         newsList: [],
         hotNews: {
-          title: '加载中...',
+          title: '...',
           source: '',
           date: '',
-          firstImage: '/images/cloudy-bg.png'
+          firstImage: ''
         }
       };
     });

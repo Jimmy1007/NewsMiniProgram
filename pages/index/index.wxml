@@ -21,7 +21,7 @@
               <view class="hot-news-date">{{newsListMap[item.code].hotNews.date}}</view>
             </view>
           </view>
-          <!-- 热点新闻TAG -->
+          <!-- 热点新闻 -->
           <view class="hot-news-tag">热点</view>
           <!-- 热点新闻图片 -->
           <image class="hot-news-image" src="{{newsListMap[item.code].hotNews.firstImage}}" mode="scaleToFill"></image>
