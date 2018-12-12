@@ -44,7 +44,7 @@ Page({
       },
       success: (res) => {
         let news = res.data.result;
-        console.log(news);
+        //console.log(news);
         let date = new Date(news.date);
         this.setData({
           newsDetail: {
