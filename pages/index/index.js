@@ -111,7 +111,7 @@ Page({
             title: news.title,
             date: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`,
             source: news.source === '' ? '未知来源' : news.source, //判断是否有来源
-            firstImage: news.firstImage ? news.firstImage : '/images/sunny-bg.png'//判断是否有图片
+            firstImage: news.firstImage ? news.firstImage : ''//判断是否有图片
           });
         });
         let newsListMap = this.data.newsListMap;
@@ -131,7 +131,7 @@ Page({
   },
 
   bindChange(event) {
-    console.log(event);
+    //console.log(event);
     // https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html 
     // Bug & Tip:
     // 如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则有可能导致 setData 被不停地调用，
@@ -152,7 +152,7 @@ Page({
     */
   toNewsDetail(event) {
     let newsId = event.currentTarget.dataset.id;
-    console.log(newsId);
+    //console.log(newsId);
     wx.navigateTo({
       url: '/pages/news-detail/news-detail?newsId=' + newsId,
     });

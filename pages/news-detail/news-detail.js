@@ -44,7 +44,7 @@ Page({
       },
       success: (res) => {
         let news = res.data.result;
-        // console.log(news);
+        console.log(news);
         let date = new Date(news.date);
         this.setData({
           newsDetail: {
@@ -53,7 +53,7 @@ Page({
             date: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()} ${date.getHours()}:${date.getMinutes()}`,
             source: news.source === '' ? '未知来源' : news.source,
             readCount: news.readCount,
-            firstImage: news.firstImage === '' ? '/images/sunny-bg.png' : news.firstImage,
+            firstImage: news.firstImage === '' ? '' : news.firstImage,
             content: news.content
           }
         });
