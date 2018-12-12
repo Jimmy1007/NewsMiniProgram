@@ -26,10 +26,10 @@ Page({
    * 页面加载后，通过getNewsList函数从网络获取当前选中类别的新闻列表
    */
   onLoad() {
-    this.setSwiperHeight();
-    this.initNewsListMap();
-    this.getNewsList();
-  },
+    this.setSwiperHeight();//设置滑块的高度
+    this.initNewsListMap();//初始化新闻页面
+    this.getNewsList();//获取新闻信息
+  }, 
 
   /**
  * 由于swpier默认高度是150px,
@@ -74,7 +74,7 @@ Page({
     * 并重新调用onTapCategory函数获取新选中类别的新闻列表数据
     */
   onTapCategory(event) {
-    // console.log(event);
+    console.log(event);
     let categoryCode = event.currentTarget.dataset['categoryCode'];
     this.setData({
       selectedCategoryCode: categoryCode
@@ -101,7 +101,7 @@ Page({
         type: this.data.selectedCategoryCode
       },
       success: (res) => {
-        // console.log(res.data.result);
+         //console.log(res.data.result);
         let newsList = [];
         // 构造用于显示的新闻列表
         res.data.result.forEach(news => {
@@ -110,8 +110,8 @@ Page({
             id: news.id,
             title: news.title,
             date: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`,
-            source: news.source === '' ? '未知来源' : news.source,
-            firstImage: news.firstImage ? news.firstImage : '/images/sunny-bg.png'
+            source: news.source === '' ? '未知来源' : news.source, //判断是否有来源
+            firstImage: news.firstImage ? news.firstImage : '/images/sunny-bg.png'//判断是否有图片
           });
         });
         let newsListMap = this.data.newsListMap;
@@ -123,6 +123,7 @@ Page({
           newsListMap: newsListMap
         });
       },
+         //complete里面的 获取数据完成后不管是success还是fail都是会执行
       complete: () => {
         cb && cb();
       }
@@ -130,7 +131,7 @@ Page({
   },
 
   bindChange(event) {
-    // console.log(event);
+    console.log(event);
     // https://developers.weixin.qq.com/miniprogram/dev/component/swiper.html 
     // Bug & Tip:
     // 如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则有可能导致 setData 被不停地调用，
