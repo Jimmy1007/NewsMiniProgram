@@ -1,4 +1,3 @@
-<!--新闻分类-->
 <view class="category-wrapper">
   <view class="category-tab" bindtap="onTapCategory" data-category-code="{{item.code}}" wx:for="{{categories}}" wx:key="code">
     <view class="category-text {{selectedCategoryCode === item.code ? 'active' : ''}}">{{item.name}}</view>
@@ -9,7 +8,7 @@
 <swiper circular current-item-id="{{selectedCategoryCode}}" bindchange="bindChange" style="height: {{swiperHeight}}rpx">
   <block wx:for="{{categories}}" wx:key="{{item.code}}">
     <swiper-item item-id="{{item.code}}">
-      <!-- 新闻内容 -->
+      /* 新闻内容 */
       <view class="news-wrapper">
         <!-- 热点新闻容器 -->
         <view class="hot-news-wrapper" data-id="{{newsListMap[item.code].hotNews.id}}" bindtap="toNewsDetail">

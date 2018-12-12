@@ -7,7 +7,7 @@ const categories = [
   { code: 'ty', name: '体育' },
   { code: 'other', name: '其他' }
 ];
-
+//初始化data 每一个页面都是如此
 Page({
   data: {
     categories: categories,
@@ -26,9 +26,9 @@ Page({
    * 页面加载后，通过getNewsList函数从网络获取当前选中类别的新闻列表
    */
   onLoad() {
-    this.setSwiperHeight();//设置滑块的高度
-    this.initNewsListMap();//初始化新闻页面
-    this.getNewsList();//获取新闻信息
+    this.setSwiperHeight();    //设置滑块的高度
+    this.initNewsListMap();   //初始化新闻页面
+    this.getNewsList();           //获取新闻信息
   }, 
 
   /**
