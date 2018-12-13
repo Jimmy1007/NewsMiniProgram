@@ -17,7 +17,7 @@ Page({
       title: '...',
       source: '',
       date: '',
-      firstImage: ''
+      firstImage: 'sunny-bg.png'
     },
     swiperHeight: 0
   },
@@ -60,7 +60,7 @@ Page({
           title: '...',
           source: '',
           date: '',
-          firstImage: ''
+          firstImage: 'sunny-bg.png'
         }
       };
     });
@@ -111,7 +111,7 @@ Page({
             title: news.title,
             date: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`,
             source: news.source === '' ? '未知来源' : news.source, //判断是否有来源
-            firstImage: news.firstImage ? news.firstImage : ''//判断是否有图片
+            firstImage: news.firstImage ? news.firstImage : 'sunny-bg.png'//判断是否有图片
           });
         });
         let newsListMap = this.data.newsListMap;
