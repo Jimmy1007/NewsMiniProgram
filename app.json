@@ -4,7 +4,7 @@
     "pages/news-detail/news-detail"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"blue",
     "navigationBarBackgroundColor":"#fff",
     "navigationBarTitleText": "新闻快讯",
     "navigationBarTextStyle":"black",

@@ -12,8 +12,8 @@
 </view>
 
 <view class="news-content-wrapper">
-  <view class="news-section" wx:for="{{newsDetail.content}}" wx:key="id">
+  <block class="news-section" wx:for="{{newsDetail.content}}" wx:key="id">
     <view wx:if="{{item.type !== 'image'}}" class="news-text {{item.type === 'strong' ? 'strong' : ''}}">{{item.text}}</view>
     <image wx:if="{{item.type === 'image'}}" class="news-image" mode="widthFix" src="{{item.src}}"></image>
-  </view>
+  </block>
 </view>

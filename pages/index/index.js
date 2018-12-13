@@ -139,11 +139,13 @@ Page({
     //
     // 通过Tap点击新闻类别选项卡时已经setData并获取网络数据，
     // 此时event.detail.source === '', 不需要再次重复setData及获取网络数据
+    if (event.detail.currentItemId !== this.data.selectedCategoryCode){
     if (event.detail.source === 'touch') {
       this.setData({
         selectedCategoryCode: event.detail.currentItemId
       });
       this.getNewsList();
+      }
     }
   },
 
