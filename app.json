@@ -7,6 +7,7 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor":"#fff",
     "navigationBarTitleText": "新闻快讯",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
   }
 }
